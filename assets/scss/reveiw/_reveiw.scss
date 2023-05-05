@@ -1,0 +1,149 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.review {
+  margin-top: 60px;
+
+  &__title {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip-path: inset(100%);
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    background: $color-gray-bg;
+    border-radius: 12px;
+    display: grid;
+    grid-template-areas: "img  lnk" "img dsc" "img nm" "img .";
+
+    @include lg-min {
+
+      grid-template-areas: "img  lnk" "img dsc" "img nm" "img .";
+      grid-template-rows: auto auto 1fr;
+
+    }
+
+    @include lg {
+      align-items: center;
+      grid-template-areas: "lnk lnk" "dsc dsc" "lm nm";
+      grid-template-columns: auto 1fr;
+      padding: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+    padding-top: 41px;
+    grid-area: lnk;
+
+
+    @include lg-min {}
+
+    @include lg {
+      grid-area: lnk;
+      margin-left: 10px;
+      padding-top: 20px;
+    }
+  }
+
+  &__image {
+    display: block;
+    grid-area: img;
+    margin-right: 40px;
+    margin-bottom: -3px;
+    @include lg-min {}
+    @include lg {display: none;
+    }
+  }
+
+  &__icon {grid-area: lm;
+    display: none;
+
+    @include lg-min {
+      display: none;
+
+    }
+
+    @include lg {
+      display: inline;
+      border-radius: 120px;
+      grid-area: lm;
+      margin-left: 5px;
+      margin-top: 13px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__description {
+    margin-top: 3px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    grid-area: dsc;
+    margin-right: 5px;
+    @extend %text-liner-gradient-invert ;
+
+    @include lg-min {
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include lg {
+      font-size: 32px;
+      line-height: 38px;
+      grid-area: dsc;
+      margin-left: 5px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-gray-text;
+    margin-top: 20px;
+    grid-area: nm;
+
+
+    @include lg-min {}
+
+    @include lg {
+      margin-left: 10px;
+      margin-top: 13px;
+    }
+  }
+
+  &__partner {
+    margin-top: 5px;
+    line-height: 22px;
+    color: $color-gray-text;
+
+
+    @include lg-min {}
+
+    @include lg {
+      margin-left: 10px;
+      padding-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.team {
+  margin-bottom: -10px;
+  &__contanier {
+    @extend %container;
+    @include lg-min {
+      margin-bottom: 80px;
+    }
+    @include lg {
+      margin-bottom: 40px;
+    }
+  }
+
+
+  &__title {
+    font-size: 42px;
+    line-height: 50px;
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    @include lg{
+    font-size: 32px;
+    line-height: 38px;
+    }
+  }
+  &__box {
+     display: flex;
+    flex-direction: column;
+    @include lg-min {
+    }
+    @include lg {
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  &__punkto{
+    @include lg {
+    margin-top: 10px;
+  }
+
+  }
+  &__images {
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 21px;
+    color: #323264;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  &__job {
+    font-size: 16px;
+    line-height: 22px;
+    color: #B3B3BA;
+  }
+
+  &__menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 70px;
+    @include lg{
+      margin-top: -5px;
+      margin-bottom: 60px;
+    }
+  }
+&__flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include lg-min {
+  }
+  @include lg {
+    flex-wrap: wrap;
+  }
+}
+}

@@ -1,0 +1,23 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $font-primary;
+  font-size: $font-size;
+}
+
+
+
+a {
+  text-decoration: none;
+
+  color: $color-active;
+}

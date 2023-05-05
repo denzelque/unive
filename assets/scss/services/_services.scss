@@ -1,0 +1,103 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.services {
+  position: relative;
+
+  border-radius: 0 0 12px 12px;
+  background: $linear-gradient3;
+
+  @include sm-min {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @include sm {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    right: $gap-xl;
+    left: $gap-xl;
+
+    height: 20px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background: $color-gray-bg-alt;
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    right: $gap;
+    left: $gap;
+
+    height: 10px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background: $color-gray-text;
+  }
+
+
+  &__page-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: rgba($color-white, 0.5);
+
+    font-size: 0.875rem;
+
+    &::after {
+      display: inline-block;
+
+      width: 12px;
+      height: 12px;
+
+      content: "";
+      transform: translate(2px, 1px);
+
+      background-image: url(../img/LinkArrow.svg);
+    }
+  }
+
+  &__title {
+    width: max-content;
+    max-width: 100%;
+
+    line-height: $line-height;
+
+    @extend %text-liner-gradient-invert ;
+    @include lg-min {
+      margin-bottom: 68px;
+
+      font-size: 42px;
+    }
+    @include lg {
+      margin-bottom: 48px;
+
+      font-size: 32px;
+    }
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+
+    gap: 60px 40px;
+    @include xl-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include xl-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.service-item {
+  display: grid;
+
+  gap: $gap;
+  grid-template-areas: "ico" "ttl" "dsc";
+
+  @include xl-min {
+    grid-template-areas: "ico" "ttl" "dsc";
+    grid-template-rows: auto auto 1fr;
+  }
+
+  @include xl {
+    align-items: center;
+
+    grid-template-areas: "ico ttl" "dsc dsc";
+    grid-template-columns: auto 1fr;
+  }
+
+  &__title {
+    color: $color-active;
+
+    font-weight: 500;
+    line-height: $line-height;
+
+    grid-area: ttl;
+
+    @include sm-min {
+      font-size: 1.5rem;
+    }
+
+    @include sm {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__description {
+    color: $color-white;
+
+    line-height: 1.44;
+
+    grid-area: dsc;
+
+    @include sm-min {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__icon {
+    grid-area: ico;
+  }
+
+  &__image {
+    display: block;
+
+    @include xs-min {
+      width: 92px;
+      height: 92px;
+    }
+
+    @include xs {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

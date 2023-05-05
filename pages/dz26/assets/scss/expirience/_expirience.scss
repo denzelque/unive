@@ -1,0 +1,113 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.expirience {
+  margin-left: 180px;
+  @include lg-min {}
+
+  @include lg {
+    margin-top: -15px;
+  margin-left: 0px;}
+  &__contanier {
+    @extend %container;
+    @include lg-min {
+      margin-bottom: 80px; }
+    @include lg {
+      margin-bottom: 40px;}
+    }
+
+    &__block {
+      display: flex;
+      align-items: center;
+      @include lg-min {
+        }
+      @include lg {
+        flex-direction: column;
+        align-items: flex-start
+      }
+      }
+
+    &__box {
+      display: flex;
+      width: 600px;
+      flex-direction: column;
+      @include lg-min { }
+      @include lg {
+      width: auto;
+    margin-top: 35px;}
+      }
+
+
+    &__title {
+      font-size: 42px;
+      line-height: 50px;
+      background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &__description {
+      font-size: 21px;
+      line-height: 30px;
+      color: #000000;
+    }
+    &__border {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-left: 4px solid #e6e6f0;
+      height: 300px;
+      @include lg-min { }
+      @include lg {
+        display: none;
+      }
+    }
+    &__nummer {
+      display: flex;
+      margin-left: 10px;
+      @include lg-min { }
+      @include lg {
+        margin-left: 0px;
+      }
+    }
+    &__number {
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+      background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 800;
+    }
+    &__about {
+      font-size: 18px;
+      line-height: 21px;
+      color: #323264;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    &__paragraph{
+      margin-top: 20px;
+    }
+    &__img{
+      margin-top: 130px;
+      display: block;
+      width: 100%;
+      @include lg-min { }
+      @include lg {
+        display: none;
+      }
+    }
+    &__small{
+      display: none;
+      width: 100%;
+      @include lg-min { }
+      @include lg {
+      display: block;
+      margin-top: -45px;
+      }
+    }
+}

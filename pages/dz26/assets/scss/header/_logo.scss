@@ -1,0 +1,48 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+
+.logo {
+  display: flex;
+  @include sm {
+  width: 120px;
+}
+
+  &__second {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+  &__image {
+    @include sm{
+width: 80px;}
+  }
+  &__small{ @include sm {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 4px;}
+  }
+  &__symbol{
+    @include sm {
+    height: 20px;
+    width: 20px;}
+  }
+  &__slash {
+  @include sm {
+    height: 20px;
+    width: 20px;
+  }}
+  &__link{
+    font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 45px;
+  color: #323264;
+  @include sm {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 22px;}
+}
+}
+

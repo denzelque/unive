@@ -1,0 +1,12 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.review__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.review__button {
+  margin-right: 14px;
+}
