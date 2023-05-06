@@ -11,113 +11,113 @@
     @include lg-min {
       flex-wrap: nowrap;
     }
-
     @include lg {
-      flex-wrap: wrap;
       flex-direction: column;
+      flex-wrap: wrap;
     }
   }
 
   &__container {
-    @extend %container;
-    background-color: $color-gray-bg;
     border-radius: 12px;
+    background-color: $color-gray-bg;
+
+    @extend %container;
   }
 
   &__hillel {
     display: flex;
+
     border: 1.5px solid $color-white;
 
     @include lg-min {
       flex-wrap: nowrap;
     }
-
     @include lg {
       flex-wrap: wrap;
     }
   }
 
   &__title {
-    font-size: 14px;
-    line-height: 17px;
-    border: 1.5px solid $color-white;
+    padding: 20px 0 20px 20px;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-accent;
-    padding: 20px 0px 20px 20px;
+    border: 1.5px solid $color-white;
+
+    font-size: 14px;
+    line-height: 17px;
 
     @include lg-min {
-
-
     }
-
     @include lg {
-
       padding: 20px 20px 20px 20px;
     }
   }
 
   &__school {
+    padding: 48px 20px 0 20px;
+
+    color: $color-primary-soft;
+    border: 1.5px solid $color-white;
+
     font-size: 24px;
     line-height: 28px;
-    border: 1.5px solid $color-white;
-    color: $color-primary-soft;
-    padding: 48px 20px 0px 20px;
 
     @include lg-min {
-
-
     }
-
     @include lg {
-
-      padding: 20px 20px 0px 20px;
+      padding: 20px 20px 0 20px;
     }
   }
 
   &__wanna {
+    padding: 105px 20px 0 20px;
+
+    color: $color-primary-soft;
+    border: 1.5px solid $color-white;
+
     font-size: 24px;
     line-height: 28px;
-    border: 1.5px solid $color-white;
-    color: $color-primary-soft;
-    padding: 105px 20px 0px 20px;
 
     @include lg-min {
-
-
     }
-
     @include lg {
-
-      padding: 20px 20px 0px 20px;
+      padding: 20px 20px 0 20px;
     }
   }
 
   &__tap {
+    padding: 105px 20px 0 20px;
+
+    color: $color-primary-soft;
+    border: 1.5px solid $color-white;
+
     font-size: 24px;
     line-height: 28px;
-    border: 1.5px solid $color-white;
-    color: $color-primary-soft;
-    padding: 105px 20px 0px 20px;
 
     @include lg-min {
     }
     @include lg {
-      padding: 20px 20px 0px 20px;
+      padding: 20px 20px 0 20px;
     }
   }
 
   &__company {
-    font-size: 18px;
-    line-height: 26px;
-    color: $color-gray-text;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    color: $color-gray-text;
+
+    font-size: 18px;
+    line-height: 26px;
+
     @include lg-min {
     }
     @include lg {
       padding-top: 10px;
       padding-bottom: 10px;
+    }
   }
- }
 }

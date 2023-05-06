@@ -6,12 +6,10 @@
 
   gap: $gap;
   grid-template-areas: "ico" "ttl" "dsc";
-
   @include xl-min {
     grid-template-areas: "ico" "ttl" "dsc";
     grid-template-rows: auto auto 1fr;
   }
-
   @include xl {
     align-items: center;
 
@@ -26,11 +24,9 @@
     line-height: $line-height;
 
     grid-area: ttl;
-
     @include sm-min {
       font-size: 1.5rem;
     }
-
     @include sm {
       font-size: 1.125rem;
     }
@@ -42,7 +38,6 @@
     line-height: 1.44;
 
     grid-area: dsc;
-
     @include sm-min {
       font-size: 1.125rem;
     }
@@ -59,7 +54,6 @@
       width: 92px;
       height: 92px;
     }
-
     @include xs {
       width: 64px;
       height: 64px;

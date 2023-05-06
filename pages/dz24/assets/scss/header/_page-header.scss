@@ -3,25 +3,24 @@
 
 .page-header {
   position: relative;
+
   overflow: hidden;
-  background: $color-white;
+
   padding-top: 50px;
 
+  background: $color-white;
+
   &__grid {
-
-
     display: grid;
     align-items: center;
 
     @extend %container;
-
     @include sm-min {
       top: 50px;
 
       gap: $gap-sm $gap;
       grid-template-areas: "logo actions" "logo menu";
     }
-
     @include sm {
       top: $gap;
 
@@ -40,13 +39,9 @@
 
   &__actions {
     grid-area: actions;
-
-
-
   }
 
   &__content {
-    background-color: #ffffff;
     position: relative;
 
     display: flex;
@@ -54,6 +49,8 @@
     justify-content: center;
 
     min-height: auto;
+
+    background-color: #ffffff;
   }
 
 

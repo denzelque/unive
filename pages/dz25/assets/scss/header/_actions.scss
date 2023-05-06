@@ -6,7 +6,6 @@
   align-items: center;
 
   gap: $gap;
-
   @include sm-min {
     justify-content: flex-end;
 
@@ -14,7 +13,6 @@
       color: $color-gray-text;
     }
   }
-
   @include sm {
     justify-content: space-between;
 

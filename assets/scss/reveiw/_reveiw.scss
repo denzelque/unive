@@ -27,120 +27,133 @@
   }
 
   &__content {
-    background: $color-gray-bg;
-    border-radius: 12px;
     display: grid;
+
+    border-radius: 12px;
+    background: $color-gray-bg;
+
     grid-template-areas: "img  lnk" "img dsc" "img nm" "img .";
-
     @include lg-min {
-
       grid-template-areas: "img  lnk" "img dsc" "img nm" "img .";
       grid-template-rows: auto auto 1fr;
-
     }
-
     @include lg {
       align-items: center;
+
+      padding: 20px;
+
       grid-template-areas: "lnk lnk" "dsc dsc" "lm nm";
       grid-template-columns: auto 1fr;
-      padding: 20px;
     }
   }
 
   &__link {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    padding-top: 41px;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-active;
-    padding-top: 41px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+
     grid-area: lnk;
-
-
-    @include lg-min {}
-
+    @include lg-min {
+    }
     @include lg {
-      grid-area: lnk;
       margin-left: 10px;
       padding-top: 20px;
+
+      grid-area: lnk;
     }
   }
 
   &__image {
     display: block;
-    grid-area: img;
+
     margin-right: 40px;
     margin-bottom: -3px;
-    @include lg-min {}
-    @include lg {display: none;
+
+    grid-area: img;
+    @include lg-min {
+    }
+    @include lg {
+      display: none;
     }
   }
 
-  &__icon {grid-area: lm;
+  &__icon {
     display: none;
 
+    grid-area: lm;
     @include lg-min {
       display: none;
-
     }
-
     @include lg {
       display: inline;
-      border-radius: 120px;
-      grid-area: lm;
-      margin-left: 5px;
+
       margin-top: 13px;
+      margin-left: 5px;
       padding-bottom: 20px;
+
+      border-radius: 120px;
+
+      grid-area: lm;
     }
   }
 
   &__description {
     margin-top: 3px;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 50px;
-    grid-area: dsc;
     margin-right: 5px;
-    @extend %text-liner-gradient-invert ;
 
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+
+    @extend %text-liner-gradient-invert ;
+    grid-area: dsc;
     @include lg-min {
       font-size: 42px;
       line-height: 50px;
     }
-
     @include lg {
+      margin-left: 5px;
+
       font-size: 32px;
       line-height: 38px;
+
       grid-area: dsc;
-      margin-left: 5px;
     }
   }
 
   &__name {
+    margin-top: 20px;
+
+    color: $color-gray-text;
+
     font-size: 18px;
     line-height: 21px;
-    color: $color-gray-text;
-    margin-top: 20px;
+
     grid-area: nm;
-
-
-    @include lg-min {}
-
+    @include lg-min {
+    }
     @include lg {
-      margin-left: 10px;
       margin-top: 13px;
+      margin-left: 10px;
     }
   }
 
   &__partner {
     margin-top: 5px;
-    line-height: 22px;
+
     color: $color-gray-text;
 
+    line-height: 22px;
 
-    @include lg-min {}
-
+    @include lg-min {
+    }
     @include lg {
       margin-left: 10px;
       padding-bottom: 40px;

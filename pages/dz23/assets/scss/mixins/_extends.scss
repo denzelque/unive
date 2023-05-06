@@ -9,25 +9,26 @@
 %text-liner-gradient {
   background: $text-gradient;
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
 
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+          text-fill-color: transparent;
 }
 
 %text-liner-gradient-invert {
   background: $text-gradient-invert;
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
 
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+          text-fill-color: transparent;
 }
 
 %text-liner-gradient-primary {
   background: $text-gradient-invert1;
   -webkit-background-clip: text;
+          background-clip: text;
+
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+          text-fill-color: transparent;
 }

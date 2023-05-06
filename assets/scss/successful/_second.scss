@@ -8,66 +8,63 @@
     @include lg-min {
       flex-wrap: nowrap;
     }
-
     @include lg {
-      flex-wrap: wrap;
       flex-direction: column;
+      flex-wrap: wrap;
     }
   }
 
   &__look {
-    font-size: 24px;
-    line-height: 28px;
     max-width: 320px;
+    padding: 20px 20px 0 20px;
+
     color: $color-primary-soft;
     border: 1.5px solid $color-white;
-    padding: 20px 20px 0px 20px;
+
+    font-size: 24px;
+    line-height: 28px;
 
     @include lg-min {
       max-width: 320px;
-
     }
-
     @include lg {
       max-width: none;
     }
-
   }
 
   &__elligent {
-    font-size: 24px;
-    line-height: 28px;
+    padding: 76px 20px 0 20px;
+
     color: $color-primary-soft;
     border: 1.5px solid $color-white;
-    padding: 76px 20px 0px 20px;
+
+    font-size: 24px;
+    line-height: 28px;
 
     @include lg-min {
       min-width: none;
-
     }
-
     @include lg {
       min-width: none;
-      padding: 20px 20px 0px 20px;
+      padding: 20px 20px 0 20px;
     }
-
   }
 
   &__cikky {
-    font-size: 24px;
-    line-height: 28px;
+    padding: 76px 20px 0 20px;
+
     color: $color-primary-soft;
     border: 1.5px solid $color-white;
-    padding: 76px 20px 0px 20px;
+
+    font-size: 24px;
+    line-height: 28px;
 
     @include lg-min {
       min-width: none;
-
     }
-
     @include lg {
       min-width: none;
-      padding: 20px 20px 0px 20px;
+      padding: 20px 20px 0 20px;
     }
   }
 }

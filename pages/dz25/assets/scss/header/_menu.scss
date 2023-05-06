@@ -100,22 +100,29 @@
 
     padding: 0.25em 0;
 
-    color: #24A3FF;
-    @include md-min{
-      color: #24A3FF;
+    color: #24a3ff;
+
+    @include md-min {
+      color: #24a3ff;
     }
-    @include md{
+    @include md {
       color: white;
     }
-&-active{
-  color: #F0145A;
-  text-decoration: underline;
-  @include md-min{color: #F0145A;
-    text-decoration: underline;}
-  @include md{
-    text-decoration: none;
-    color: white;
-  }
-}
+    &-active {
+      text-decoration: underline;
+
+      color: #f0145a;
+
+      @include md-min {
+        text-decoration: underline;
+
+        color: #f0145a;
+      }
+      @include md {
+        text-decoration: none;
+
+        color: white;
+      }
+    }
   }
 }

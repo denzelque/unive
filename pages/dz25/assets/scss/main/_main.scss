@@ -3,122 +3,157 @@
 
 .contact {
   margin-top: 80px;
-  @include lg-min {}
 
+  @include lg-min {
+  }
   @include lg {
-    margin-top: 20px;}
+    margin-top: 20px;
+  }
   &__contanier {
     @extend %container;
     @include lg-min {
-      margin-bottom: 80px; }
-    @include lg {
-      margin-bottom: 40px;}
+      margin-bottom: 80px;
     }
+    @include lg {
+      margin-bottom: 40px;
+    }
+  }
   &__block {
-      display: flex;
-      flex-direction: column;
-      width: 527px;
-      height: 576px;
-      justify-content: center;
-      @include lg-min { }
-      @include lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 527px;
+    height: 576px;
+
+    @include lg-min {
+    }
+    @include lg {
       width: auto;
       height: auto;
-      margin-right: 10px;}
+      margin-right: 10px;
     }
-  &__adress {
-      font-size: 21px;
-      line-height: 30px;
-      color: #323264;
-      margin-bottom: 20px;
-    }
-  &__border {
-      color: #333333;
-      display: block;
-      text-align:center;
-      text-decoration: none;
-      &:after {
-        content: '';
-        display: block;
-        height: 4px;
-        background: #e6e6f0;
   }
+  &__adress {
+    margin-bottom: 20px;
+
+    color: #323264;
+
+    font-size: 21px;
+    line-height: 30px;
+  }
+  &__border {
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #333333;
+    &:after {
+      display: block;
+
+      height: 4px;
+
+      content: "";
+
+      background: #e6e6f0;
+    }
   }
   &__number {
-    font-size: 21px;
-    line-height: 30px;
-    color: #46466E;
     margin-top: 40px;
     margin-bottom: 20px;
-  }
-  &__email {
-    font-weight: 400;
+
+    color: #46466e;
+
     font-size: 21px;
     line-height: 30px;
-    color: #24A3FF;
+  }
+  &__email {
     margin-bottom: 40px;
+
+    color: #24a3ff;
+
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
   }
   &__box {
     display: flex;
     align-items: center;
+
     margin-top: 20px;
   }
   &__small {
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px 0 20px;
   }
   &__title {
-    font-family: 'TT Norms';
+    padding: 20px 20px 0 20px;
+
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-family: "TT Norms";
     font-size: 32px;
     line-height: 38px;
-    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    padding: 20px 20px 0px 20px;
-  }
-  &__all{
-    display: flex;
-    gap: 150px;
-    margin: 0px 110px 0px 110px;
-     @include lg-min {}
 
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+  }
+  &__all {
+    display: flex;
+
+    margin: 0 110px 0 110px;
+
+    gap: 150px;
+    @include lg-min {
+    }
     @include lg {
       display: flex;
-      flex-wrap: wrap;
       flex-direction: column;
+      flex-wrap: wrap;
+
       margin: 0;
+
       gap: 40px;
     }
   }
-  &__form{
+  &__form {
     display: flex;
+
     margin: 20px;
     padding: 10px;
+
+    border: 0;
     border-radius: 10px;
-    border: 0px;
   }
-  &__mak{
-    background-color: #f5f5fa;
+  &__mak {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
+
+    background-color: #f5f5fa;
   }
-  .text{
+  .text {
     height: 180px;
   }
-  .button{
+  .button {
     display: flex;
-    height: 50px;
-    width: 250px;
     justify-content: center;
-    background: #24A3FF;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    border-radius: 12px;
-    color: white;
+
+    width: 250px;
+    height: 50px;
     margin-left: 112.5px;
-    @include lg-min { }
-      @include lg {
-       margin-left: 20px;}
+
+    color: white;
+    border-radius: 12px;
+    background: #24a3ff;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+    @include lg-min {
+    }
+    @include lg {
+      margin-left: 20px;
+    }
   }
 }

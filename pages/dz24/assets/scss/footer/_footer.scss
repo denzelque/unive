@@ -3,8 +3,9 @@
 
 
 .footer {
-  background-color: $color-gray-bg ;
   padding-bottom: 40px;
+
+  background-color: $color-gray-bg ;
 
 
 
@@ -13,32 +14,40 @@
   }
 
   &__border {
-    padding-top: 20px;
-    color: #333333;
     display: block;
-    text-align:center;
+
+    padding-top: 20px;
+
+    text-align: center;
     text-decoration: none;
-    &:after {
-      content: '';
-      display: block;
-      height: 4px;
-      background: #e6e6f0;
-    }
+
+    color: #333333;
+
     @include ul-min {
     }
     @include ul {
       padding-top: 53px;
     }
+    &:after {
+      display: block;
+
+      height: 4px;
+
+      content: "";
+
+      background: #e6e6f0;
+    }
   }
 
 
   &__box {
-    padding-top: 10px;
     display: flex;
     justify-content: space-between;
 
-    @include lg-min {}
+    padding-top: 10px;
 
+    @include lg-min {
+    }
     @include lg {
       display: flex;
       flex-direction: column;
@@ -49,7 +58,8 @@
     display: flex;
     flex-direction: column;
 
-    @include lg-min {}
+    @include lg-min {
+    }
     @include lg {
       display: flex;
       flex-direction: column;
@@ -57,10 +67,13 @@
   }
 
   &__block {
-    padding-top: 20px;
     display: flex;
     align-items: center;
-    @include lg-min {}
+
+    padding-top: 20px;
+
+    @include lg-min {
+    }
     @include lg {
       display: flex;
       flex-direction: column;
@@ -68,85 +81,107 @@
   }
 
   &__adress {
-    @include lg-min {}
+    @include lg-min {
+    }
     @include lg {
       margin-bottom: 10px;
     }
-&-link{
-  font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    margin-right: 30px;
-    color: $color-primary-alt;
-    font-style: normal;
-    text-decoration: none;
-    @include lg-min {}
-    @include lg {
-      margin-right: 0px;
+    &-link {
+      margin-right: 30px;
+
+      text-decoration: none;
+
+      color: $color-primary-alt;
+
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 19px;
+
+      @include lg-min {
+      }
+      @include lg {
+        margin-right: 0;
+      }
     }
   }
-}
   &__punkt {
     margin-right: 10px;
     margin-bottom: 1px;
-    @include lg-min {}
+
+    @include lg-min {
+    }
     @include lg {
       display: none;
     }
   }
-&__map-link{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+  &__map-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 14px;
+  }
   &__facebook {
     margin-right: 10px;
-    @include lg-min {}
+
+    @include lg-min {
+    }
     @include lg {
       margin-bottom: 20px;
     }
   }
 
   &__mail-link {
-margin-left:10px ;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    margin-left: 10px ;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-active;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
   }
 
   &__copyright {
     padding-top: 20px;
+
+    color: $color-gray-text;
+
     font-weight: 400;
     line-height: 19px;
-    color: $color-gray-text;
-    @include lg-min {}
+
+    @include lg-min {
+    }
     @include lg {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      padding-bottom: 100px;
+      flex-direction: column;
       justify-content: center;
+
+      padding-bottom: 100px;
     }
   }
 
   &__number {
-    @include lg-min {}
+    @include lg-min {
+    }
     @include lg {
       margin-bottom: 20px;
     }
-    &-link{
-    margin-right: 10px;
-    font-weight: 700;
-    line-height: 19px;
-    color: $color-primary-soft;
-    text-decoration: none;
+    &-link {
+      margin-right: 10px;
+
+      text-decoration: none;
+
+      color: $color-primary-soft;
+
+      font-weight: 700;
+      line-height: 19px;
     }
   }
-
 }
